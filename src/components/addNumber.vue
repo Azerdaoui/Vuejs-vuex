@@ -9,7 +9,7 @@ export default {
     name: "add-number",
     methods: {
         add() {
-            this.$store.dispatch('fetchNumbers')
+            this.$store.dispatch('fetchNumbers', {})
         }
     }
 }
