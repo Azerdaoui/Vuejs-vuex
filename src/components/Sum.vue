@@ -1,11 +1,21 @@
 <template>
     <div class="hello">
-        sum
+        <Numbers />
+        {{ sum }}
     </div>
 </template>
 
 <script>
+import Numbers from './Numbers'
 export default {
-    name: 'Sum'
+    name: 'Sum',
+    computed: {
+        sum(){
+            return this.$store.getters.sum
+        }
+    },
+    components:{
+        Numbers,
+    }
 }
 </script>
