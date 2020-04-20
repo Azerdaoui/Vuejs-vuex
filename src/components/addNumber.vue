@@ -1,16 +1,17 @@
 <template>
     <div>
-        <a href="#" @click.prevent="add()">Add random number</a>
+        <a href="#" @click.prevent="fetchNumbers()">Add random number</a>
     </div>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 export default {
     name: "add-number",
     methods: {
-        add() {
-            this.$store.dispatch('fetchNumbers', {})
-        }
+        ...mapActions({
+            fetchNumbers: 'fetchNumbers'
+        })
     }
 }
 </script>

@@ -8,15 +8,15 @@
 
 <script>
 import Numbers from './Numbers'
+import { mapGetters } from 'vuex'
+
 export default {
     name: 'Sum',
     computed: {
-        sum(){
-            return this.$store.getters.sum
-        },
-        totalNumbers(){
-            return this.$store.getters.totalNumbers
-        }
+        ...mapGetters({
+            sum: 'sum',
+            total: 'totalNumbers'
+        })
     },
     components:{
         Numbers,
