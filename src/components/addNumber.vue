@@ -9,7 +9,7 @@ export default {
     name: "add-number",
     methods: {
         add() {
-            this.$store.commit('addRandomNumber', Math.floor(Math.random() * 10) + 1)
+            this.$store.dispatch('fetchNumbers')
         }
     }
 }
